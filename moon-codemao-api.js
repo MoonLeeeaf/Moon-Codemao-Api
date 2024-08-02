@@ -116,6 +116,21 @@ const CodemaoApi = class {
                 r(null)
             }))
         }
+        /**
+         * Update my details
+         * @param { Object } body
+         * @param { String } body.description
+         * @param { String } body.nickname
+         * @param { String } body.avatar_url
+         * @returns { Promise<Boolean> } successOrFailure
+         */
+        static updateMyDetails(body) {
+            return promise((r) => fetch(`${CodemaoApi.baseUrl}/tiger/v3/web/accounts/info`, { headers: CodemaoApi.headers, method: "patch", body: body }).then(async (res) => {
+                if (res.status >= 200 && res.status < 300)
+                    return r(true)
+                r(false)
+            }))
+        }
     }
     /**
      * 作品逻辑
