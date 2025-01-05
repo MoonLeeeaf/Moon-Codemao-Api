@@ -1,3 +1,7 @@
+### 去你妈的bcm
+
+你应当使用 [Aumiao](https://github.com/Aurzex/Aumiao) 来代替这个过时的项目
+
 ### 满月叶的编程猫接口封装
 
 #### 使用
